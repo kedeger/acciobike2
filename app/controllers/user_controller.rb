@@ -9,9 +9,13 @@ class UserController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
+    u = User.find(params[:id])
+    u.update(user_params)
+    redirect_to root_path
   end
 
   def new

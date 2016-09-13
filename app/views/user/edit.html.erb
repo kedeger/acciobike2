@@ -1,2 +1,21 @@
-<h1>User#edit</h1>
-<p>Find me in app/views/user/edit.html.erb</p>
+<div class="container well">
+    <h1>Edit your info</h1>
+
+    <%= form_for @user do |form| %>
+
+        <div class="md-form">
+            <%= form.text_field :name, class: 'form-control', id: 'name' %>
+            <%= form.label :name, class: '', for: 'name' %>
+        </div>
+
+        <div class="md-form">
+            <%= form.text_field :email, class: 'form-control', id: 'email' %>
+            <%= form.label :email, class: '', for: 'email' %>
+        </div>
+
+        <div class="md-form">
+            <%= form.submit 'SUBMIT', :class => 'btn btn-primary' %>
+        </div>
+
+    <%end%>
+</div>
